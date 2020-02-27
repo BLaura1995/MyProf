@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: red;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+header {
+  background: yellow;
+}
+
+header nav {
+  padding: 10px;
+  text-align: right;
+}
+
+header nav a {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+main {
+  background-color: green;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+main h1 {
+  margin: 0 auto;
+  width: 50%;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+article {
+  width: 90%;
+  background-color: yellow;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article .left {
+  background-color: blue;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+article .right {
+  background-color: purple;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.midden {
+  width: 90%;
+  background-color: yellow;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.midden .leftreverse {
+  background-color: green;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.midden .rightreverse {
+  background-color: yellow;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/*# sourceMappingURL=style.css.map */
