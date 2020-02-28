@@ -6,88 +6,72 @@
 }
 
 body {
-  background-color: red;
+  font-family: 'Dancing Script', 'serif';
 }
 
 .container {
   width: 80%;
   margin: 0 auto;
-  background-color: #fff;
-}
-
-header {
-  background: yellow;
 }
 
 header nav {
-  padding: 10px;
+  background-color: #756F9D;
+  padding: 20px;
   text-align: right;
 }
 
 header nav a {
-  background-color: green;
-  color: white;
-  padding: 10px;
+  background-color: white;
+  color: #756F9D;
+  padding: 15px;
   margin-right: 20px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+header nav :hover {
+  background-color: #756F9D;
+  color: white;
 }
 
 main {
-  background-color: green;
-  margin-top: 10px;
-  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #756F9D;
+  margin: 10px auto;
 }
 
-main h1 {
-  margin: 0 auto;
-  width: 50%;
-  background-color: #fff;
+main img {
+  border: 5px solid white;
+  border-radius: 5px;
+  width: 30%;
+  margin: 10px;
+}
+
+main .tekst {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  background-color: #B8E5D1;
   text-align: center;
-  padding: 10px;
+  border: 5px solid white;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
 }
 
-article {
-  width: 90%;
-  background-color: yellow;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+main .tekst h1 {
+  text-shadow: 4px 4px 4px #aaa;
+  color: #756F9D;
+  padding-bottom: 15px;
+  font-size: 3.5rem;
 }
 
-article .left {
-  background-color: blue;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-article .right {
-  background-color: purple;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-}
-
-.midden {
-  width: 90%;
-  background-color: yellow;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.midden .leftreverse {
-  background-color: green;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-}
-
-.midden .rightreverse {
-  background-color: yellow;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+main .tekst p {
+  color: #262626;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

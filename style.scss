@@ -1,90 +1,83 @@
+$darkpurpel: #756F9D;
+$tekstalign:center;
+@mixin h1 {
+    padding-bottom: 15px;
+    font-size: 3.5rem;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+@mixin p {
+    color: #262626;
+    font-size: 1.5rem;
+}
+
+@mixin flex($kolommen) {
+    display: flex;
+    &>* {
+        flex: 0 0 (1 / $kolommen * 100%);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-$tekstalign:"text-align:center";
 body {
-    background-color: red;
+    font-family: 'Dancing Script', 'serif';
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
-    background-color: #fff;
 }
 
 header {
-    background: yellow;
     nav {
-        padding: 10px;
+        background-color: #756F9D;
+        padding: 20px;
         text-align: right;
         a {
-            background-color: green;
-            color: white;
-            padding: 10px;
+            background-color: $darkpurpel;
+            color: #756F9D;
+            padding: 15px;
             margin-right: 20px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 20px;
+        }
+        & :hover {
+            background-color: #756F9D;
+            color: white;
         }
     }
 }
 
-@mixin center {
-    width: 90%;
-    background-color: yellow;
-    margin: 0 auto;
-    display: flex;
-}
-
-@mixin left {
-    background-color: blue;
-    flex-grow: 1;
-}
-
-@mixin right {
-    background-color: purple;
-    flex-grow: 2;
-}
-
-@mixin leftreverse {
-    background-color: green;
-    flex-grow: 2;
-}
-
-@mixin rightreverse {
-    background-color: yellow;
-    flex-grow: 1;
-}
-
 main {
-    background-color: green;
-    margin-top: 10px;
-    padding: 10px;
-    h1 {
-        margin: 0 auto;
-        width: 50%;
-        background-color: #fff;
+    @import 'flex($2)';
+    background-color: #756F9D;
+    margin: 10px auto;
+    img {
+        border: 5px solid white;
+        border-radius: 5px;
+        width: 30%;
+        margin: 10px;
+    }
+    .tekst {
+        background-color: #B8E5D1;
         text-align: center;
-        padding: 10px;
-    }
-}
-
-article {
-    @include center;
-    .left {
-        @include left;
-    }
-    .right {
-        @include right;
-    }
-}
-
-.midden {
-    @include center;
-    .leftreverse {
-        @include leftreverse;
-    }
-    .rightreverse {
-        @include rightreverse;
+        border: 5px solid white;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 20px;
+        h1 {
+            color: #756F9D;
+            @import' h1';
+        }
+        p {
+            @import 'p';
+        }
     }
 }
