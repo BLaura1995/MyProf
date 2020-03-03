@@ -16,3 +16,8 @@ $tekstalign:center;
     display: flex;
     justify-content: center;
 }
+
+@mixin border {
+    border: 5px solid white;
+    border-radius: 5px;
+}

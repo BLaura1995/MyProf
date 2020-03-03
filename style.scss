@@ -1,88 +1,103 @@
-    @import 'voorkeuren';
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+@import 'voorkeuren';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(117, 111, 157, 1));
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    nav {
+        padding: 20px;
+        text-align: right;
+        a {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #262626;
+            padding: 15px;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 20px;
+        }
+        & :hover {
+            background-color: #756F9D;
+            color: white;
+        }
     }
-    
-    body {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(117, 111, 157, 1));
+}
+
+main {
+    @include flex-kolommen(2);
+    margin: 10px auto;
+    background-color: red;
+    img {
+        @include border;
+        margin: 10px;
+        width: 40%;
     }
-    
-    .container {
-        width: 80%;
-        margin: 0 auto;
+    .tekst {
+        background-color: #B8E5D1;
+        text-align: center;
+        @include border;
+        margin: 10px;
+        padding: 20px;
+        width: 40%;
+        h1 {
+            color: #756F9D;
+            @include h1;
+        }
+        h2 {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 1rem;
+        }
+        p {
+            @include p;
+        }
     }
-    
+}
+
+section {
+    @include flex-kolommen(2);
+    .werkervaring {
+        width: 40%;
+        background-color: green;
+        text-align: center;
+        @include border;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:800px) {
     header {
         nav {
-            padding: 20px;
-            text-align: right;
+            padding: 10px;
+            text-align: center;
             a {
-                background-color: rgba(255, 255, 255, 0.7);
-                color: #262626;
-                padding: 15px;
-                margin-right: 20px;
-                font-size: 1.5rem;
-                text-decoration: none;
-                margin: 10px;
-                border-radius: 20px;
-            }
-            & :hover {
-                background-color: #756F9D;
-                color: white;
+                display: block;
             }
         }
     }
-    
     main {
-        @include flex-kolommen(2);
-        margin: 10px auto;
-        background-color: red;
+        display: block;
         img {
-            border: 5px solid white;
-            border-radius: 5px;
-            margin: 10px;
-            width: 40%;
+            width: 70%;
         }
         .tekst {
-            background-color: #B8E5D1;
-            text-align: center;
-            border: 5px solid white;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 20px;
-            width: 40%;
+            width: 70%;
             h1 {
-                color: #756F9D;
-                @include h1;
-            }
-            p {
-                @include p;
+                font-size: 2.5rem;
             }
         }
     }
-    
-    @media screen and (max-width:800px) {
-        header {
-            nav {
-                padding: 10px;
-                text-align: center;
-                a {
-                    display: block;
-                }
-            }
-        }
-        main {
-            display: block;
-            img {
-                width: 70%;
-            }
-            .tekst {
-                width: 70%;
-                h1 {
-                    font-size: 2.5rem;
-                }
-            }
-        }
-    }
+}
