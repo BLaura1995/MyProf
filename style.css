@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: 'Dancing Script', 'serif';
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(#756f9d));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), #756f9d);
 }
 
 .container {
@@ -15,14 +16,13 @@ body {
 }
 
 header nav {
-  background-color: #756F9D;
   padding: 20px;
   text-align: right;
 }
 
 header nav a {
-  background-color: white;
-  color: #756F9D;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #262626;
   padding: 15px;
   margin-right: 20px;
   font-size: 1.5rem;
@@ -40,38 +40,54 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #756F9D;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 10px auto;
 }
 
 main img {
   border: 5px solid white;
   border-radius: 5px;
-  width: 30%;
   margin: 10px;
+  width: 30%;
 }
 
 main .tekst {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
   background-color: #B8E5D1;
   text-align: center;
   border: 5px solid white;
   border-radius: 5px;
   margin: 10px;
   padding: 20px;
+  width: 30%;
 }
 
 main .tekst h1 {
-  text-shadow: 4px 4px 4px #aaa;
   color: #756F9D;
   padding-bottom: 15px;
   font-size: 3.5rem;
+  text-shadow: 4px 4px 4px #aaa;
+  font-family: 'Dancing Script', 'serif';
 }
 
 main .tekst p {
   color: #262626;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    display: block;
+  }
+  main img {
+    width: 70%;
+  }
+  main .tekst {
+    width: 70%;
+  }
+  main .tekst h1 {
+    font-size: 2.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

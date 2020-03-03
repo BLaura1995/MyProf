@@ -4,6 +4,7 @@ $tekstalign:center;
     padding-bottom: 15px;
     font-size: 3.5rem;
     text-shadow: 4px 4px 4px #aaa;
+    font-family: 'Dancing Script', 'serif';
 }
 
 @mixin p {
@@ -13,7 +14,5 @@ $tekstalign:center;
 
 @mixin flex-kolommen($kolommen) {
     display: flex;
-    &>* {
-        flex: 0 0 (1 / $kolommen * 100%);
-    }
+    justify-content: center;
 }
