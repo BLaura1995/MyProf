@@ -44,13 +44,14 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 10px auto;
+  background-color: red;
 }
 
 main img {
   border: 5px solid white;
   border-radius: 5px;
   margin: 10px;
-  width: 30%;
+  width: 40%;
 }
 
 main .tekst {
@@ -60,7 +61,7 @@ main .tekst {
   border-radius: 5px;
   margin: 10px;
   padding: 20px;
-  width: 30%;
+  width: 40%;
 }
 
 main .tekst h1 {
@@ -73,10 +74,17 @@ main .tekst h1 {
 
 main .tekst p {
   color: #262626;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (max-width: 800px) {
+  header nav {
+    padding: 10px;
+    text-align: center;
+  }
+  header nav a {
+    display: block;
+  }
   main {
     display: block;
   }
